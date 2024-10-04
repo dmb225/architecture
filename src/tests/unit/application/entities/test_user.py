@@ -1,9 +1,9 @@
 from uuid import UUID
 
-from core.entities.user import User
+from application.entities.user import User
 
 
-def test_user_creation():
+def test_user_creation() -> None:
     user = User(
         name="Alice Smith", email="alice@example.com", password="securepassword", confirmed=False
     )
@@ -15,7 +15,7 @@ def test_user_creation():
     assert isinstance(user.id, UUID)
 
 
-def test_user_default_id():
+def test_user_default_id() -> None:
     user1 = User(
         name="Alice Smith", email="alice@example.com", password="securepassword", confirmed=False
     )
@@ -26,7 +26,7 @@ def test_user_default_id():
     assert user1.id != user2.id
 
 
-def test_user_email_format():
+def test_user_email_format() -> None:
     user = User(
         name="Alice Smith", email="alice@example.com", password="securepassword", confirmed=False
     )
@@ -35,7 +35,7 @@ def test_user_email_format():
     assert "." in user.email.split("@")[-1]
 
 
-def test_user_confirmation():
+def test_user_confirmation() -> None:
     user = User(
         name="Alice Smith", email="alice@example.com", password="securepassword", confirmed=True
     )
