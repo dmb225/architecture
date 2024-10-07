@@ -5,8 +5,7 @@ from application.interfaces.database import Database
 
 
 class InMemoryDatabase(Database):
-    def __init__(self, model_name: str) -> None:
-        self.model_name = model_name
+    def __init__(self) -> None:
         self.storage: dict[str, Any] = {}
 
     def add(self, entity_data: dict[str, Any]) -> None:

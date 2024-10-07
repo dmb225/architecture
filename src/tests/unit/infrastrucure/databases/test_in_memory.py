@@ -6,7 +6,7 @@ from infrastructure.databases.in_memory import InMemoryDatabase
 
 @pytest.fixture
 def in_memory_db() -> InMemoryDatabase:
-    return InMemoryDatabase("User")
+    return InMemoryDatabase()
 
 
 def test_in_memory_database_operations(in_memory_db: InMemoryDatabase) -> None:

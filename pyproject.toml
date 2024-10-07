@@ -5,6 +5,7 @@ authors = [
     {name = "Malick Abu Imran", email="daomalick225@gmail.com"},
 ]
 dependencies = [
+    "sqlalchemy==2.0.35",
 ]
 
 [build-system]
