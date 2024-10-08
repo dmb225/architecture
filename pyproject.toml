@@ -26,6 +26,7 @@ strict = true
 
 [tool.pytest.ini_options]
 addopts = "-v --tb=short"
+asyncio_default_fixture_loop_scope = "function"
 
 [tool.ruff]
 line-length = 100
